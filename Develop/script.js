@@ -31,7 +31,7 @@ function generatePassword() {
  var upperConfirm = confirm("Include uppercase?");
  var numberConfirm = confirm("Include numbers?");
  var symbolConfirm = confirm("Include symbols?")
-   while(upperConfirm === false && lowerConfirm === false && symbolConfirm === false && numberConfirm === false) {
+   while(lowerConfirm === false && upperConfirm === false && numberConfirm === false && symbolConfirm === false) {
      alert("You must choose at least one character type.");
      var lowerConfirm = confirm("Include lowercase?");
      var upperConfirm = confirm("Include uppercase?");
@@ -41,25 +41,25 @@ function generatePassword() {
 
 //PASSWORD CRITERIA MERGES WITH ARRAY CHARS
  
-// var passwordChars = "";
+var passwordChars = "";
 
-//   if (lowerConfirm) {
-//     passwordChars = passwordChars.concat(lower)
-//   }
+  if (lowerConfirm) {
+    passwordChars = passwordChars.concat(lower)
+  }
 
-//   if (upperConfirm) {
-//     passwordChars = passwordChars.concat(upper)
-//   }
+  if (upperConfirm) {
+    passwordChars = passwordChars.concat(upper)
+  }
 
-//   if (numberConfirm) {
-//     passwordChars = passwordChars.concat(number)
-//   }
+  if (numberConfirm) {
+    passwordChars = passwordChars.concat(number)
+  }
 
-//   if (symbolConfirm) {
-//     passwordChars = passwordChars.concat(symbol)
-//   }
-// console.log(passwordChars);
+  if (symbolConfirm) {
+    passwordChars = passwordChars.concat(symbol)
+  }
 
+// CREATES & RETURNS RANDOM PASSWORD
   var randomPassword = "";
 
   for (var i = 0; i < passwordLength; i++){
