@@ -46,18 +46,22 @@ var passwordChars = "";
   if (lowerConfirm) {
     passwordChars = passwordChars.concat(lower)
   }
+  console.log(lower);
 
   if (upperConfirm) {
     passwordChars = passwordChars.concat(upper)
   }
+  console.log(upper);
 
   if (numberConfirm) {
     passwordChars = passwordChars.concat(number)
   }
+  console.log(number);
 
   if (symbolConfirm) {
     passwordChars = passwordChars.concat(symbol)
   }
+console.log(symbol);
 
 // CREATES & RETURNS RANDOM PASSWORD
   var randomPassword = "";
