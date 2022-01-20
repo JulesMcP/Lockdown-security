@@ -8,6 +8,6 @@ The user will get the option to choose the following:
 
 Screenshot of my deployed webpage below.
 
-![image](https://user-images.githubusercontent.com/95149604/150370113-8d722305-815b-4875-9b0b-9bac121bf64a.png)
+![image](https://user-images.githubusercontent.com/95149604/150399520-d692e5e2-e4d7-4086-9396-faffffbf3bc8.png)
 
 https://julesmcp.github.io/Lockdown-security/
