@@ -8,7 +8,14 @@ var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N
 var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var number = ["0", "9", "8", "7", "6", "5", "4", "3", "2", "1"];
 var symbol = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "-", "~", "`", "?", ">", "<", ":", "/", "."];
-console.log(lower);
+console.log(lower, upper, number, symbol);
+
+//CONFIRMATIONS
+var lowerConfirm;
+var upperConfirm;
+var numberConfirm;
+var symbolConfirm;
+var passwordLength;
 
 // CHOOSE PASSWORD LENGTH
 function generatePassword() {
@@ -20,21 +27,46 @@ function generatePassword() {
   }
 
  // CHOOSE PASSWORD CRITERIA
- var passwordLower = confirm("Include lowercase?");
- var passwordUpper = confirm("Include uppercase?");
- var passwordNumber = confirm("Include numbers?");
- var passwordSymbol = confirm("Include symbols?")
-   while(passwordUpper === false && passwordLower === false && passwordSymbol === false && passwordNumber === false) {
+ var lowerConfirm = confirm("Include lowercase?");
+ var upperConfirm = confirm("Include uppercase?");
+ var numberConfirm = confirm("Include numbers?");
+ var symbolConfirm = confirm("Include symbols?")
+   while(upperConfirm === false && lowerConfirm === false && symbolConfirm === false && numberConfirm === false) {
      alert("You must choose at least one character type.");
-     var passwordLower = confirm("Include lowercase?");
-     var passwordUpper = confirm("Include uppercase?");
-     var passwordNumber = confirm("Include numbers?");
-     var passwordSymbol = confirm("Include symbols?")    
+     var lowerConfirm = confirm("Include lowercase?");
+     var upperConfirm = confirm("Include uppercase?");
+     var numberConfirm = confirm("Include numbers?");
+     var symbolConfirm = confirm("Include symbols?")    
  }
 
- var randomPassword = "";
+//PASSWORD CRITERIA MERGES WITH ARRAY CHARS
+ 
+// var passwordChars = "";
 
+//   if (lowerConfirm) {
+//     passwordChars = passwordChars.concat(lower)
+//   }
 
+//   if (upperConfirm) {
+//     passwordChars = passwordChars.concat(upper)
+//   }
+
+//   if (numberConfirm) {
+//     passwordChars = passwordChars.concat(number)
+//   }
+
+//   if (symbolConfirm) {
+//     passwordChars = passwordChars.concat(symbol)
+//   }
+// console.log(passwordChars);
+
+  var randomPassword = "";
+
+  for (var i = 0; i < passwordLength; i++){
+    randomPassword = randomPassword + passwordChars[Math.floor(Math.random() * passwordChars.length)];
+    console.log(randomPassword);
+  }
+  return randomPassword;
 }
 
 //Write password to the #password input
