@@ -8,13 +8,15 @@ var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N
 var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var number = ["0", "9", "8", "7", "6", "5", "4", "3", "2", "1"];
 var symbol = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "-", "~", "`", "?", ">", "<", ":", "/", "."];
+console.log(lower);
 
 // CHOOSE PASSWORD LENGTH
 function generatePassword() {
   var passwordLength = prompt("How many characters would you like your password to have? Please enter a number from 8 - 128.");
 
-  if (passwordLength != null , passwordLength < 8 || passwordLength > 128) {
+  while (passwordLength != null , passwordLength < 8 || passwordLength > 128) {
     alert("Invalid response. Please enter a number 8 - 128.")
+    var passwordLength = prompt("How many characters would you like your password to have? Please enter a number from 8 - 128.");
   }
 
  // CHOOSE PASSWORD CRITERIA
