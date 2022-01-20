@@ -8,7 +8,6 @@ var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N
 var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var number = ["0", "9", "8", "7", "6", "5", "4", "3", "2", "1"];
 var symbol = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "-", "~", "`", "?", ">", "<", ":", "/", "."];
-console.log(lower, upper, number, symbol);
 
 //CONFIRMATIONS
 var lowerConfirm;
@@ -51,20 +50,19 @@ var passwordChars = "";
   if (upperConfirm) {
     passwordChars = passwordChars.concat(upper)
   }
-  console.log(upper);
 
   if (numberConfirm) {
     passwordChars = passwordChars.concat(number)
   }
-  console.log(number);
 
   if (symbolConfirm) {
     passwordChars = passwordChars.concat(symbol)
   }
-console.log(symbol);
+
+  passwordChars = passwordChars.split(",");
 
 // CREATES & RETURNS RANDOM PASSWORD
-  var randomPassword = "";
+  var randomPassword = ""
 
   for (var i = 0; i < passwordLength; i++){
     randomPassword = randomPassword + passwordChars[Math.floor(Math.random() * passwordChars.length)];
