@@ -3,13 +3,13 @@
 // GENERATE ELEMENT
 var generateBtn = document.querySelector("#generate");
 
-//RANDOM ARRAY CHARACTERS IF CHOSEN
+//RANDOM ARRAY CHARACTERS IF SELECTED
 var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var number = ["0", "9", "8", "7", "6", "5", "4", "3", "2", "1"];
 var symbol = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "=", "-", "~", "`", "?", ">", "<", ":", "/", "."];
 
-//CONFIRMATIONS
+//CONFIRMATION VARIABLES
 var lowerConfirm;
 var upperConfirm;
 var numberConfirm;
@@ -59,6 +59,7 @@ var passwordChars = "";
     passwordChars = passwordChars.concat(symbol)
   }
 
+  //REMOVE COMMAS FROM GENERATED PASSWORD
   passwordChars = passwordChars.split(",");
 
 // CREATES & RETURNS RANDOM PASSWORD
